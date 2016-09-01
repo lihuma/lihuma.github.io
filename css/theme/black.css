@@ -3,32 +3,53 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
-section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
-  color: #222; }
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700);
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
   background: #222;
-  background-color: #222; }
+  background-color: #556b2f;
+ }
 
 .reveal {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-size: 38px;
+  font-family: "Roboto Condensed";
+  font-size: 1.5em;
   font-weight: normal;
-  color: #fff; }
+  color: #000;
+  }
 
 ::selection {
   color: #fff;
-  background: #bee4fd;
+  background: #556b2f;
   text-shadow: none; }
-
-.reveal .slides > section,
-.reveal .slides > section > section {
+  
+  ::-moz-selection {
+  color: #fff;
+  background: #556b2f;
+  text-shadow: none; }
+  
+.reveal .slides > section {
+	background: #222;
+	background-color: #fff;
+	padding: 5%;
+	margin-right: 1em;
+	height: 75%;
+	/*line-height: 1.3;*/
+	font-weight: inherit;
+	text-align: left;
+	 }
+ 
+ .reveal .slides > section > section {
+background: #222;
+  background-color: #ddd; 
+  height: 75%;
+  width: 90%;
   line-height: 1.3;
-  font-weight: inherit; }
+  font-weight: inherit;
+  text-align: left;
+ }
 
 /*********************************************
  * HEADERS
@@ -39,44 +60,123 @@ body {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  margin: 0 0 20px 0;
-  color: #fff;
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
-  font-weight: 600;
-  line-height: 1.2;
+  font-family: "Roboto Condensed" ;
   letter-spacing: normal;
-  text-transform: uppercase;
   text-shadow: none;
-  word-wrap: break-word; }
+  word-wrap: break-word;
+    text-align: center;
+ }
 
 .reveal h1 {
-  font-size: 2.5em; }
+  font-size: 2.5em;
+  margin: 0 0 .5em 0;
+  color: #000;
+  text-transform: uppercase; 
+ }
 
 .reveal h2 {
-  font-size: 1.6em; }
+  font-size: 2.0em;
+    margin: .5em 0 .5em 0;
+    text-transform: uppercase;
+    color: #111;
+ }
 
 .reveal h3 {
-  font-size: 1.3em; }
+ margin: .5em 0 .5em 0;
+ font-size: 1.5em; 
+ color: #000;
+  text-align: center;
+}
 
 .reveal h4 {
-  font-size: 1em; }
+  font-size: 1.0em;
+  text-align: left; }
+  
+  .reveal h5 {
+  font-size: 0.75em;
+  text-align:left;
+   }
+   
+ /*  .reveal h6 {
+	font-size: 1em;
+	display: block;
+  position: relative;
+  width: 50%;
+  margin: 20px auto;
+  padding: 1em;
+  font-style: normal;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); } */
 
-.reveal h1 {
-  text-shadow: none; }
+
 
 /*********************************************
  * OTHER
  *********************************************/
 .reveal p {
-  margin: 20px 0;
-  line-height: 1.3; }
+  margin: 1em .5em 1em 0;
+  line-height: inherit;
+  }
+  
+ .reveal p.pico {
+  font-size: 1em;
+  display: block;
+  position: relative;
+  width: 70%;
+  line-height: 1.25em;
+  margin: .25em auto;
+  padding: .75em;
+  font-style: normal;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+  
+  .reveal p.ebp {
+  font-size: 1em;
+  display: block;
+  position: relative;
+  width: 90%;
+  line-height: 1.2em;
+  margin: 1em auto;
+  padding: 1em;
+  font-style: normal;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); }
+  
+  .reveal p.credits {
+  font-size: .75em;
+  display: block;
+  position: relative;
+  width: 50%;
+  margin: 5% auto;
+  padding: 1.5em;
+  font-style: normal;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+  
+   .reveal p.toc {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  display: block;
+  position: relative;
+  width: 90%;
+  margin: 5% auto;
+  padding: 1em;
+  font-style: normal;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
+	  
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
-.reveal video,
-.reveal iframe {
-  max-width: 95%;
-  max-height: 95%; }
+.reveal video, {
+  max-width: 99%;
+  max-height: 99%;
+   }
+   
+   .reveal iframe {
+  max-width: 110%;
+  max-height: 110%;
+   }
 
 .reveal strong,
 .reveal b {
@@ -89,14 +189,17 @@ body {
 .reveal dl,
 .reveal ul {
   display: inline-block;
+  line-height: 1.25em;
   text-align: left;
-  margin: 0 0 0 1em; }
+  margin-left: 10%;
+  margin-top: .25em; }
 
 .reveal ol {
   list-style-type: decimal; }
 
 .reveal ul {
-  list-style-type: disc; }
+	list-style-type: disc;
+   }
 
 .reveal ul ul {
   list-style-type: square; }
@@ -126,15 +229,15 @@ body {
   position: relative;
   width: 70%;
   margin: 20px auto;
-  padding: 5px;
-  font-style: italic;
+  padding: 1em;
+  font-style: normal;
   background: rgba(255, 255, 255, 0.05);
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2); }
-
+/*
 .reveal blockquote p:first-child,
 .reveal blockquote p:last-child {
   display: inline-block; }
-
+*/
 .reveal q {
   font-style: italic; }
 
@@ -201,33 +304,36 @@ body {
 .reveal small * {
   vertical-align: top; }
 
+
 /*********************************************
  * LINKS
  *********************************************/
 .reveal a {
-  color: #42affa;
-  text-decoration: none;
+  text-decoration: underline; 
+  color: #000;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #8dcffc;
+	text-decoration: underline;
+  color: #616365;
   text-shadow: none;
   border: none; }
-
+/*
 .reveal .roll span:after {
   color: #fff;
-  background: #068de9; }
+  background: #068de9; }*/
+ 
 
 /*********************************************
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  margin: 1em 1.5em 1em 1.5em;
+ background: inherit;
+  border: 1px solid #fff;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal section img.plain {
   border: 0;
@@ -248,40 +354,31 @@ body {
  *********************************************/
 .reveal .controls .navigate-left,
 .reveal .controls .navigate-left.enabled {
-  border-right-color: #42affa; }
+  border-right-color: #fff; }
 
 .reveal .controls .navigate-right,
 .reveal .controls .navigate-right.enabled {
-  border-left-color: #42affa; }
+  border-left-color: #fff; }
 
-.reveal .controls .navigate-up,
-.reveal .controls .navigate-up.enabled {
-  border-bottom-color: #42affa; }
 
-.reveal .controls .navigate-down,
-.reveal .controls .navigate-down.enabled {
-  border-top-color: #42affa; }
 
 .reveal .controls .navigate-left.enabled:hover {
-  border-right-color: #8dcffc; }
+  border-right-color: #000; }
 
 .reveal .controls .navigate-right.enabled:hover {
-  border-left-color: #8dcffc; }
+  border-left-color: #000; }
 
-.reveal .controls .navigate-up.enabled:hover {
-  border-bottom-color: #8dcffc; }
 
-.reveal .controls .navigate-down.enabled:hover {
-  border-top-color: #8dcffc; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
-  background: rgba(0, 0, 0, 0.2); }
+  background: #fff;
+  height: 2.5%; }
 
 .reveal .progress span {
-  background: #42affa;
+  background: #000;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
